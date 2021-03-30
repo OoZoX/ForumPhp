@@ -4,7 +4,7 @@
 include '../action/recupCountries.php';
 
 foreach ($dataCountry as $dataCountries): ?>
-  <form action="../action/modifSuprCreateCountries.php" method="post">
+  <form action="../action/gestionCountries.php" method="post">
 
     <textarea placeholder="nom pays" name="name" rows="1" cols="22"><?php echo $dataCountries['name']; ?></textarea>
     <textarea placeholder="image" name="image" rows="1" cols="22"><?php echo $dataCountries['image']; ?></textarea>
