@@ -1,4 +1,4 @@
-<form class="" action="index.php" method="post">
+<form class="" action="" method="post">
 
   <input type="text" name="title"
   placeholder="Titre Article"/>
