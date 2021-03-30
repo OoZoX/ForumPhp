@@ -15,20 +15,17 @@ if (empty($_SESSION['admin'])) {
   </div>
 
   <div>
-    <?php include '../content/navAdmin.php'; ?>
-  </div>
-
-  <div>
     <h2>Creation d'un Article</h2>
   </div>
 
   <div>
     <div>
-      <?php include '../content/formCreateArticles.php'; ?>
+      <?php include '../action/recupCountries.php'; ?>
+      <?php include '../content/articles/formCreateArticles.php'; ?>
     </div>
 
     <div>
-      <?php include '../' ?>
+
     </div>
   </div>
 </div>

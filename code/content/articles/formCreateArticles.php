@@ -1,7 +1,15 @@
-<form action="../action/modifArticles.php" method="post">
+<form action="../action/gestionArticles.php" method="post">
 
   <input type="text" name="title"
   placeholder="Titre Article"/>
+
+  <input type="date" name="date"
+  placeholder="Date de l'evenement"/>
+
+  <select name="country">
+    <option value="test">choisir pays</option>
+    <?php include '../content/selectCountries.php'; ?>
+  </select>
 
   <input type="text" name="location"
   placeholder="Ville"/>
@@ -15,6 +23,6 @@
   <textarea name="text2" rows="8" cols="200"
   placeholder="Deuxième Paragraphe"></textarea>
 
-  <input type="submit" name="" value="Valider">
+  <input type="submit" name="create" value="Valider">
 
 </form>
