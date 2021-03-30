@@ -24,9 +24,7 @@
         </div>
 
 
-    <?php include '../content/footer.php';
-    echo password_hash('azerty', PASSWORD_DEFAULT);
-    ?>
+
 
 
 

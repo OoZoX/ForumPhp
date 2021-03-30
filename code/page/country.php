@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
 $title = 'Pays';
 include '../content/head.php';
 ?>
@@ -38,22 +38,5 @@ include '../content/head.php';
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include '../content/footer.php' ?>
-
-
-    
 </body>
 </html>
