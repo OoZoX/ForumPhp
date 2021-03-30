@@ -23,14 +23,5 @@
           <a href="#">voir plus</a>
         </div>
 
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 1b90590d4a49ed0f3669b247ad621e6f3f362004
   </body>
 </html>
