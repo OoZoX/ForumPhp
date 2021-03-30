@@ -8,3 +8,9 @@ else {
   include '../content/nav.php';
 }
 ?>
+<div>
+  <h1>Page Admin</h1>
+
+</div>
+
+<?php include '../content/navAdmin.php'; ?>
