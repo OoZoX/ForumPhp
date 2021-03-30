@@ -14,3 +14,9 @@ else {
 </div>
 
 <?php include '../content/navAdmin.php'; ?>
+<div>
+  <h2>Creation d'un Article</h2>
+</div>
+<div>
+  <?php include '../content/' ?>
+</div>
