@@ -6,4 +6,3 @@ $sql =
 $prepareRequete = $pdo->prepare($sql);
 $prepareRequete->execute();
 $dataCountry = $prepareRequete->fetchAll(PDO::FETCH_ASSOC);
-?>

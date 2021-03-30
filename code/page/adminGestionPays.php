@@ -11,24 +11,24 @@ if (empty($_SESSION['admin'])) {
   </div>
 
   <div>
-    <h1>Page Admin</h1>
+    <h1>Gestion Pays</h1>
   </div>
 
   <div>
-    <?php include '../content/navAdmin.php'; ?>
-  </div>
-
-  <div>
-    <h2>Creation Modification Suppression Pays</h2>
-  </div>
-
-  <div>
+    <div>
+      <h3>Ajouter un pays</h3>
+    </div>
     <div>
       <?php include '../content/countries/formCreateCountries.php'; ?>
     </div>
 
     <div>
-      <?php include '../content/countries/formModifCountries.php'; ?>
+      <div>
+        <h3>Pays existant</h3>
+      </div>
+      <div>
+        <?php include '../content/countries/formModifCountries.php'; ?>
+      </div>
     </div>
   </div>
 </div>
