@@ -1,5 +1,11 @@
 <h3>Ajouter un pays</h3>
 <form action="../action/modifSuprCreateCountries.php" method="post">
-  <?php include 'formCountriesComposition.php'; ?>
+
+  <input type="text" name="name"
+  placeholder="Nom pays"/>
+
+  <input type="text" name="image"
+  placeholder="Lien Image"/>
   <input type="submit" value="Ajouter">
+  
 </form>

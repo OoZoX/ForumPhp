@@ -1,14 +1,18 @@
 <?php
 require_once '../action/config.php';
-$sql = 'SELECT * FROM admins WHERE email= :email'; /* Commande sql */
+$sql = /* Commande sql */
+' SELECT * FROM admins
+  WHERE email= :email
+';
 
 $dataBinded = array(
   ':email' => $_POST['email'],
 );
 
-$prepare = $pdo->prepare($sql);
-$prepare->execute($dataBinded);
-$admin = current($prepare->fetchAll(PDO::FETCH_ASSOC));
+$prepareRequete = $pdo->prepare($sql);
+$prepareRequete->execute($dataBinded);
+
+$admin = current($prepareRequete->fetchAll(PDO::FETCH_ASSOC));
 if(empty($admin)){
   $_SESSION['message'] = 'Email incorrect';
   header('Location:../page/login.php');
@@ -23,4 +27,3 @@ if(empty($admin)){
     header('Location:../page/login.php');
   }
 }
-
