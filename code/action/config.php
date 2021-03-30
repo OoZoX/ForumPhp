@@ -1,7 +1,7 @@
 <?php
 session_start();
 $pdo = new PDO(
-  'mysql:host=localhost;dbname=bdProjet14;',
+  'mysql:host=localhost;dbname=bd_forum_projet_14;',
   'root',
   '',
   array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
