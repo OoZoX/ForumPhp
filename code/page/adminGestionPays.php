@@ -24,11 +24,11 @@ if (empty($_SESSION['admin'])) {
 
   <div>
     <div>
-      <?php include '../content/pays/formCreatePays.php'; ?>
+      <?php include '../content/countries/formCreateCountries.php'; ?>
     </div>
 
     <div>
-      <?php include '../content/pays/formModifPays.php'; ?>
+      <?php include '../content/countries/formModifCountries.php'; ?>
     </div>
   </div>
 </div>

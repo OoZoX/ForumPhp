@@ -9,22 +9,26 @@ if (empty($_SESSION['admin'])) {
   <div>
     <?php include '../content/nav.php' ?>
   </div>
+
   <div>
     <h1>Page Admin</h1>
-
   </div>
 
-  <?php include '../content/navAdmin.php'; ?>
+  <div>
+    <?php include '../content/navAdmin.php'; ?>
+  </div>
+
   <div>
     <h2>Creation d'un Article</h2>
   </div>
+
   <div>
     <div>
       <?php include '../content/formCreateArticles.php'; ?>
     </div>
+
     <div>
       <?php include '../' ?>
     </div>
   </div>
-
 </div>
