@@ -28,7 +28,7 @@ else {
     VALUES(:admin_id, :name, :image)
   ";
   $dataBinded = array(
-    ':admin_id' => $_POST['admin_id'],
+    ':admin_id' => $_SESSION['admin']['id'],
     ':name' =>  $_POST['name'],
     ':image' => $_POST['image']
   );
