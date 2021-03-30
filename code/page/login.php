@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../action/config.php";
 
 if (isset($_SESSION['admin'])) {
@@ -38,8 +38,7 @@ if (isset($_SESSION['admin'])) {
       <?php if (isset($_SESSION['message'])) {
         echo ($_SESSION['message']);
       } ?>
-        
+
     </div>
-    <?php include '../content/footer.php' ?>
   </body>
 </html>
