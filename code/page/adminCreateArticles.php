@@ -18,5 +18,5 @@ else {
   <h2>Creation d'un Article</h2>
 </div>
 <div>
-  <?php include '../content/' ?>
+  <?php include '../content/formCreateArticles.php'; ?>
 </div>
