@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------------------------------
 
 VISITYOURECOUNTRY.COM
-                      
+
 ---------------------------------------------------------------------------------------------------------------------------
 
 Venez découvrir vos prochaines destinations et leur cultures exclusive.
@@ -18,6 +18,4 @@ Une fois cela fait , vous devrez extraire le fichier zip que vous avez installer
 AUTEURS :
 	Gaming Campus :
 		Bastien AUFFRET <bauffret@gaming.tech>  
-		Quentin BARDEL-MARECHAL <qbardelmarechal@gaming.tech> 
-
-		test test
+		Quentin BARDEL-MARECHAL <qbardelmarechal@gaming.tech>
