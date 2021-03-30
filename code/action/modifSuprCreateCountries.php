@@ -1,5 +1,5 @@
 <?php
-require_once '../config.php';
+require_once 'config.php';
 
 if (isset($_SESSION['admin'])) {
   header('Location: ../../page/index.php');
@@ -9,7 +9,7 @@ if (isset($_SESSION['admin'])) {
 if ($_POST['btnModif'] = 'Modifier') {
   $sql =
   " UPDATE countries
-    SET name, image = :name, :image
+    SET name, image = :name, :image 
     WHERE id = $_POST['id']
   ";
   $dataBinded = array(
@@ -19,8 +19,6 @@ if ($_POST['btnModif'] = 'Modifier') {
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
 }
-
-
 else {
   $sql =
   " INSERT INTO countries
@@ -37,4 +35,4 @@ else {
 }
 
 
-header 'Location: ../../page/adminCreatePays.php';
+header('Location: ../page/adminCreatePays.php');
