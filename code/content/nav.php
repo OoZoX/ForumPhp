@@ -4,12 +4,12 @@
             <li><a href="../page/index.php">Accueil</a></li>
 
           <?php if (isset($_SESSION['admin'])): ?>
-            <li><a href="../page/adminCreateArticles.php">Gestion des articles</a></li>
-            <li><a href="../page/adminCreatePays.php">Gestion des pays</a></li>
+            <li><a href="../page/adminGestionArticles.php">Gestion des articles</a></li>
+            <li><a href="../page/adminGestionPays.php">Gestion des pays</a></li>
             <li><a href="../action/logOut.php">Vous Déconnecter</a></li>
+
           <?php else:
-            include '../action/recupCountries.php';
-            ?>
+            include '../action/recupCountries.php';?>
             <li>
               <form action="../page/index.php" method="post">
                 <select name="selectCounty">
@@ -21,6 +21,7 @@
                 </select>
               </form>
             </li>
+
             <li><a href="../page/login.php">Connexion</a></li>
             <?php endif ?>
         </ul>
