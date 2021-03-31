@@ -14,6 +14,14 @@ Ensuite télécharger wamp serveur sur : https://www.wampserver.com/
 Une fois cela fait , vous devrez extraire le fichier zip que vous avez installer et ensuite le déplacer dans : « C:\wamp64(2)\www ». lorsque vous arriverez sur le lien , vous pourrez supprimer tous les dossier s’y trouvant car il n’auront aucune importance . Ouvrez une page de navigateur web puis taper : « localhost » . ensuite rentrer dans le dossier « code » , « php » et vous arriverez automatiquement sur notre page d’accueil . Bon voyage.
 
 ---------------------------------------------------------------------------------------------------------------------------
+Version php : 8.0.3
+Version phpMyAdmin : 5.1.0
+
+La base de donné est dans le fichier baseDeDonnee
+Il faut créer une bd avec le nom : bd_forum_projet_14
+Il faut ensuite executer le scripte dans la bd
+Le mdc est également dans le dossier baseDeDonnee
+---------------------------------------------------------------------------------------------------------------------------
 
 AUTEURS :
 	Gaming Campus :
