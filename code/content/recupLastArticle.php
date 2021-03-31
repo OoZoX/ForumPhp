@@ -1,7 +1,7 @@
 <?php
 $sql =
 ' SELECT * FROM articles
-  ORDER BY date_publication DESC
+  ORDER BY date_publication asc
   LIMIT 1
 ';
 $prepareRequete = $pdo->prepare($sql);
