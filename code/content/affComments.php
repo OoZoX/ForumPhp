@@ -1,5 +1,5 @@
 <?php
-foreach ($_RECUP['comments'] as $comments) :
+foreach ($_RECUP['comments'] as $comments) :    //affichage des commentaires
  ?>
  <div>
    <div>

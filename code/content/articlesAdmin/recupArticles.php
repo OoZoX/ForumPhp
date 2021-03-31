@@ -1,4 +1,4 @@
-<?php
+<?php       //recupere tout les article pour les afficher en admin
 
 $sql =
 ' SELECT id FROM countries WHERE name = :name

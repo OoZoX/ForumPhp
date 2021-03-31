@@ -1,7 +1,9 @@
 <?php require_once '../action/config.php'; ?>
 
 <html lang="fr" dir="ltr">
-  <?php include '../content/head.php'; ?>
+  <?php
+  include '../content/head.php';
+  $title = 'articles'; ?>
   <body>
     <header>
       <?php include '../content/nav.php'; ?>

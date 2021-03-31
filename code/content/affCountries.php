@@ -1,4 +1,4 @@
-<?php
+<?php         //affichage des pays
 foreach ($dataCountry as $dataCountries) : ?>
   <form action="articles.php" method="post">
     <input type="hidden" name="title" value="<?php echo $dataCountries['title'] ?>">

@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['country'])) :
-  include '../content/articlesAdmin/recupArticles.php';
+  include '../content/articlesAdmin/recupArticles.php';   //recupere tout les article pour le pays selectionné
   foreach ($dataArticle as $dataArticles) :?>
-  <form action="../action/gestionArticles.php" method="post">
+  <form action="../action/gestionArticles.php" method="post">   <!-- formulaire qui affiche les artcicle en admin pour pouvoir modifier -->
     <textarea name="title" placeholder="Titre Article" rows="8" cols="20"><?php echo $dataArticles['title'] ?></textarea>
 
     <textarea name="date_content" placeholder="Date de l'evenement" rows="8" cols="20"><?php echo $dataArticles['date_content'] ?></textarea>

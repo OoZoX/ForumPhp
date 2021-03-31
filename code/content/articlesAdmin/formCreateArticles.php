@@ -1,4 +1,4 @@
-<form action="../action/gestionArticles.php" method="post">
+<form action="../action/gestionArticles.php" method="post">   <!-- formulaire de creation d'article -->
 
   <input type="text" name="title"
   placeholder="Titre Article"/>

@@ -5,7 +5,7 @@ if (empty($_SESSION['admin'])) {
   header('Location: ../../page/index.php');
 }
 
-if (isset($_POST['create'])) {
+if (isset($_POST['create'])) {            //create article
   $sql =
   ' SELECT id FROM countries
     WHERE name = :name
@@ -37,7 +37,7 @@ if (isset($_POST['create'])) {
 }
 
 
-elseif (isset($_POST['Modifier'])) {
+elseif (isset($_POST['Modifier'])) {        // modifie article
 
   $sql =
   ' SELECT id FROM countries
@@ -70,7 +70,7 @@ elseif (isset($_POST['Modifier'])) {
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
 }
-elseif (isset($_POST['Supprimer'])){
+elseif (isset($_POST['Supprimer'])){    //supprimer article et ses commentaires
   $sql =
   ' DELETE FROM comments
     WHERE article_id = :id
