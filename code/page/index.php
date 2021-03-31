@@ -1,4 +1,7 @@
-<?php require_once '../action/config.php'; ?>
+<?php
+require_once '../action/config.php';
+include '../content/recupLastArticle.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -16,7 +19,7 @@
     <div>
       <h2>Dernier article posté</h2>
     </div>
-    
+    <?php include '../content/afficheArticles.php'; ?>
 
 
   </body>
