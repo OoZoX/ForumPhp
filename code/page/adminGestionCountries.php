@@ -12,11 +12,9 @@ if (empty($_SESSION['admin'])) {
   $title = 'Gestion pays';
   ?>
   <body>
-    <div>
-      <div>
-        <?php include '../content/nav.php' ?>
-      </div>
-
+    <header>
+      <?php include '../content/nav.php' ?>
+    </header>
       <div>
         <h1>Gestion Pays</h1>
       </div>
@@ -38,6 +36,5 @@ if (empty($_SESSION['admin'])) {
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>

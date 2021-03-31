@@ -12,11 +12,10 @@ if (empty($_SESSION['admin'])) {
   $title = 'Gestion Article';
   ?>
   <body>
-    <div>
-      <div>
-        <?php include '../content/nav.php' ?>
-      </div>
-
+    <header>
+      <?php include '../content/nav.php' ?>
+    </header>
+    
       <div>
         <h1>Page Admin</h1>
       </div>
@@ -50,7 +49,6 @@ if (empty($_SESSION['admin'])) {
           <?php include '../content/articles/afficheArticlesAdmin.php'; ?>
         </div>
       </div>
-    </div>
 
   </body>
 </html>

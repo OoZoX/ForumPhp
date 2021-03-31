@@ -7,7 +7,9 @@
   include '../content/head.php';
   ?>
   <body>
-    <?php include '../content/nav.php' ?>
+    <header>
+      <?php include '../content/nav.php' ?>
+    </header>
     <h1>VENEZVISITERLEPAYSDEVOTRECHOIX.COM</h1>
     <h2>Dernier article posté</h2>
 
