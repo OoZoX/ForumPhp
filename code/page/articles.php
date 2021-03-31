@@ -21,6 +21,7 @@
     </div>
     <div>
       <h3>Tout les commentaires</h3>
+      <?php  ?>
     </div>
   </body>
 </html>
