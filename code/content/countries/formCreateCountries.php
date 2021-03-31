@@ -1,4 +1,4 @@
-<form action="../content/gestionCountries.php" method="post">
+<form action="../action/gestionCountries.php" method="post">
 
   <input type="text" name="name"
   placeholder="Nom pays"/>

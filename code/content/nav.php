@@ -5,11 +5,11 @@
 
           <?php if (isset($_SESSION['admin'])) : ?>
             <li><a href="../page/adminGestionArticles.php">Gestion des articles</a></li>
-            <li><a href="../page/adminGestionPays.php">Gestion des pays</a></li>
+            <li><a href="../page/adminGestionCountries.php">Gestion des pays</a></li>
             <li><a href="../action/logOut.php">Vous Déconnecter</a></li>
 
           <?php else :
-            include '../action/recupCountries.php';?>
+            include '../content/recupCountries.php';?>
             <li>
               <form action="../page/index.php" method="post">
                 <select name="selectCounty">

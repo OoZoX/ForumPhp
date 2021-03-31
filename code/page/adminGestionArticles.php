@@ -26,7 +26,7 @@ if (empty($_SESSION['admin'])) {
         </div>
 
         <div>
-          <?php include '../action/recupCountries.php'; ?>
+          <?php include '../content/recupCountries.php'; ?>
           <?php include '../content/articlesAdmin/formCreateArticles.php'; ?>
         </div>
       </div>
