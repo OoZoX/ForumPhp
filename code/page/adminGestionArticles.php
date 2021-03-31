@@ -52,7 +52,7 @@ if (empty($_SESSION['admin'])) {
           <textarea name="date_content" placeholder="Date de l'evenement" rows="8" cols="20"><?php echo $dataArticles['date_content'] ?></textarea>
 
           <select name="country">
-            <option value="test"><?php echo $_POST['country'] ?></option>
+            <option value="test"><?php echo $_POST['countrySelect'] ?></option>
             <?php include '../content/selectCountries.php'; ?>
           </select>
 
