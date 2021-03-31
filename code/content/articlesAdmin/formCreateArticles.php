@@ -6,7 +6,7 @@
   <input type="date" name="date"
   placeholder="Date de l'evenement"/>
 
-  <select name="country">
+  <select name="countrySelect">
     <option value="test">choisir pays</option>
     <?php include '../content/selectCountries.php'; ?>
   </select>

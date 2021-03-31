@@ -38,7 +38,8 @@ if (empty($_SESSION['admin'])) {
 
         <div>
           <form action="adminGestionArticles.php" method="post">
-            <select name="countrySelect">
+            <select name="country">
+              <option value="">Choisir un pays</option>
               <?php include '../content/selectCountries.php'; ?>
               <input type="submit" name="btn" value="go"/>
             </select>

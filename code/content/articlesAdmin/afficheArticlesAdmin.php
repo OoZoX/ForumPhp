@@ -1,5 +1,6 @@
-<?php if (isset($_POST['countrySelect']) or isset($_SESSION['article'])) :
-  include '../content/articles/recupArticles.php';
+<?php
+if (isset($_POST['country'])) :
+  include '../content/articlesAdmin/recupArticles.php';
   foreach ($dataArticle as $dataArticles) :?>
   <form action="../action/gestionArticles.php" method="post">
     <textarea name="title" placeholder="Titre Article" rows="8" cols="20"><?php echo $dataArticles['title'] ?></textarea>
@@ -7,7 +8,7 @@
     <textarea name="date_content" placeholder="Date de l'evenement" rows="8" cols="20"><?php echo $dataArticles['date_content'] ?></textarea>
 
     <select name="country">
-      <option value="test"><?php echo $_POST['countrySelect'] ?></option>
+      <option value="<?php echo $_POST['country'] ?>"><?php echo $_POST['country'] ?></option>
       <?php include '../content/selectCountries.php'; ?>
     </select>
 

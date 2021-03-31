@@ -35,19 +35,22 @@ if (isset($_POST['create'])) {
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
 }
+
+
 elseif (isset($_POST['Modifier'])) {
-  $_SESSION['article'] = $_POST['countrySelect'];
-  
+
   $sql =
   ' SELECT id FROM countries
     WHERE name = :name
   ';
   $dataBinded = array(
-    ':name' => $_POST['countrySelect']
+    ':name' => $_POST['country']
   );
+
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
   $idCountry = $prepareRequete->fetchAll(PDO::FETCH_ASSOC);
+
 
   $sql =
   ' UPDATE articles
@@ -61,13 +64,23 @@ elseif (isset($_POST['Modifier'])) {
     ':description' => $_POST['text1'],
     ':description_2' => $_POST['text2'],
     ':date_content' => $_POST['date_content'],
-    ':city' => $_POST['location']
+    ':city' => $_POST['location'],
+    ':id' => $_POST['id']
   );
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
 }
 elseif (isset($_POST['Supprimer'])){
-  $_SESSION['article'] = $_POST['countrySelect'];
+  $sql =
+  ' DELETE FROM comments
+    WHERE article_id = :id
+  ';
+  $dataBinded = array(
+    ':id' => $_POST['id']
+  );
+  $prepareRequete = $pdo->prepare($sql);
+  $prepareRequete->execute($dataBinded);
+
   $sql =
   ' DELETE FROM articles
     WHERE id = :id
