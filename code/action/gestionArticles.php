@@ -15,7 +15,7 @@ if (isset($_POST['create'])) {
   );
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
-  $id_country = $prepareRequete->fetchAll(PDO::FETCH_ASSOC);
+  $idCountry = $prepareRequete->fetchAll(PDO::FETCH_ASSOC);
 
   $sql =
   ' INSERT INTO articles
@@ -23,7 +23,7 @@ if (isset($_POST['create'])) {
     VALUES(:country_id, :admin_id, :title, :image, :description, :description_2, :date_content, :city)
   ';
   $dataBinded = array(
-    ':country_id' => $id_country['0']['id'],
+    ':country_id' => $idCountry['0']['id'],
     ':admin_id' => $_SESSION['admin']['id'],
     ':title' => $_POST['title'],
     ':image' => $_POST['imgArticle'],
