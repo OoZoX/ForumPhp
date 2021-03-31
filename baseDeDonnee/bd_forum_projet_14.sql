@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 29 mars 2021 à 14:18
--- Version du serveur :  8.0.23
+-- Généré le : mer. 31 mars 2021 à 04:47
+-- Version du serveur :  5.7.31
 -- Version de PHP : 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `bdprojet14`
+-- Base de données : `bd_forum_projet_14`
 --
 
 -- --------------------------------------------------------
@@ -29,20 +29,21 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `admins`;
 CREATE TABLE IF NOT EXISTS `admins` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `admins`
 --
 
-INSERT INTO `admins` (`id`, `name`, `first_name`, `email`, `password`) VALUES
-(1, 'Admin', 'Admin', 'admin@develop.com', '$2y$10$Qjtnzan1/T/L3MfV24YVhOCR/xZUnDXHetiIQlyS77TUuCTg73Hie');
+INSERT INTO `admins` (`id`, `email`, `name`, `first_name`, `password`) VALUES
+(1, 'projet14@develop.com', 'Admin', 'Admin', '$2y$10$3VHDUVzAgr7JB10zooa4d.KCl5oq72wTe7CE.l/eNRkWDUxOdtAhi');
 
 -- --------------------------------------------------------
 
@@ -52,19 +53,20 @@ INSERT INTO `admins` (`id`, `name`, `first_name`, `email`, `password`) VALUES
 
 DROP TABLE IF EXISTS `articles`;
 CREATE TABLE IF NOT EXISTS `articles` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `country_id` int NOT NULL,
-  `admin_id` int NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `country_id` int(11) NOT NULL,
+  `admin_id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `image` blob NOT NULL,
+  `image` varchar(100) NOT NULL,
   `description` text NOT NULL,
+  `description_2` text NOT NULL,
   `date_publication` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_content` date NOT NULL,
-  `countries` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country_id` (`country_id`) USING BTREE,
   KEY `admin_id` (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -74,14 +76,14 @@ CREATE TABLE IF NOT EXISTS `articles` (
 
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `article_id` int NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) NOT NULL,
   `date_publication` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `pseudo` varchar(50) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `article_id` (`article_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -91,13 +93,13 @@ CREATE TABLE IF NOT EXISTS `comments` (
 
 DROP TABLE IF EXISTS `countries`;
 CREATE TABLE IF NOT EXISTS `countries` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `admin_id` int NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `admin_id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `image` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `admins_id` (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Contraintes pour les tables déchargées
