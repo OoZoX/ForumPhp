@@ -1,6 +1,7 @@
 <?php
 foreach ($dataCountry as $dataCountries) : ?>
   <form action="articles.php" method="post">
+    <input type="hidden" name="title" value="<?php echo $dataCountries['title'] ?>">
     <div>
       <h3><?php echo $dataCountries['title']; ?></h3>
     </div>

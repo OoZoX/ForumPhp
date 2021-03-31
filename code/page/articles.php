@@ -6,5 +6,11 @@
     <header>
       <?php include '../content/nav.php'; ?>
     </header>
+    <div>
+      <?php
+      include '../content/recupArticle.php';
+      include '../content/afficheArticles.php' ;
+      ?>
+    </div>
   </body>
 </html>
