@@ -21,7 +21,11 @@
     </div>
     <div>
       <h3>Tout les commentaires</h3>
-      <?php  ?>
+      <?php
+      include '../content/recupComments.php';
+      include '../content/affComments.php';
+      ?>
+
     </div>
   </body>
 </html>
