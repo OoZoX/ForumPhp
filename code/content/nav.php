@@ -11,8 +11,8 @@
           <?php else :
             include '../content/recupCountries.php';?>
             <li>
-              <form action="../page/index.php" method="post">
-                <select name="selectCounty">
+              <form action="../page/countries.php" method="post">
+                <select name="selectCountry">
                   <option value="test">choisir pays</option>
                   <?php include 'selectCountries.php'; ?>
                   <input type="submit" name="go" value="go">
