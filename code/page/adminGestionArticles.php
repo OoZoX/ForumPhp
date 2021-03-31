@@ -1,6 +1,5 @@
 <?php
 require_once '../action/config.php';
-include '../functions/choisesCountry.php';
 
 if (empty($_SESSION['admin'])) {
   header('Location: index.php');
@@ -34,17 +33,14 @@ if (empty($_SESSION['admin'])) {
     <div>
       <form action="adminGestionArticles.php" method="post">
         <select name="countrySelect">
-          <option value="choise">choisir pays</option>
           <?php include '../content/selectCountries.php'; ?>
           <input type="submit" name="btn" value="go"/>
         </select>
       </form>
     </div>
+
     <div>
-
       <?php include '../content/articles/afficheArticlesAdmin.php'; ?>
-
-
     </div>
   </div>
 </div>

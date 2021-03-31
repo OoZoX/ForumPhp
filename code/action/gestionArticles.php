@@ -35,6 +35,48 @@ if (isset($_POST['create'])) {
   $prepareRequete = $pdo->prepare($sql);
   $prepareRequete->execute($dataBinded);
 }
+elseif (isset($_POST['Modifier'])) {
+  $_SESSION['article'] = $_POST['countrySelect'];
+  
+  $sql =
+  ' SELECT id FROM countries
+    WHERE name = :name
+  ';
+  $dataBinded = array(
+    ':name' => $_POST['countrySelect']
+  );
+  $prepareRequete = $pdo->prepare($sql);
+  $prepareRequete->execute($dataBinded);
+  $idCountry = $prepareRequete->fetchAll(PDO::FETCH_ASSOC);
 
+  $sql =
+  ' UPDATE articles
+    SET country_id=:country_id, title=:title, image=:image, description=:description, description_2=:description_2, date_content=:date_content, city=:city
+    WHERE id = :id
+  ';
+  $dataBinded = array(
+    ':country_id' => $idCountry['0']['id'],
+    ':title' => $_POST['title'],
+    ':image' => $_POST['imgArticle'],
+    ':description' => $_POST['text1'],
+    ':description_2' => $_POST['text2'],
+    ':date_content' => $_POST['date_content'],
+    ':city' => $_POST['location']
+  );
+  $prepareRequete = $pdo->prepare($sql);
+  $prepareRequete->execute($dataBinded);
+}
+elseif (isset($_POST['Supprimer'])){
+  $_SESSION['article'] = $_POST['countrySelect'];
+  $sql =
+  ' DELETE FROM articles
+    WHERE id = :id
+  ';
+  $dataBinded = array(
+    ':id' => $_POST['id']
+  );
+  $prepareRequete = $pdo->prepare($sql);
+  $prepareRequete->execute($dataBinded);
+}
 
 header('Location: ../page/adminGestionArticles.php');

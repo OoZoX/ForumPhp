@@ -1,4 +1,4 @@
-<?php if (isset($_POST['countrySelect'])) :
+<?php if (isset($_POST['countrySelect']) or isset($_SESSION['article'])) :
   include '../content/articles/recupArticles.php';
   foreach ($dataArticle as $dataArticles) :?>
   <form action="../action/gestionArticles.php" method="post">
@@ -21,8 +21,10 @@
     <textarea name="text2" rows="8" cols="20"
     placeholder="Deuxième Paragraphe"><?php echo $dataArticles['description_2'] ?></textarea>
 
-    <input type="submit" name="Modifier" value="Modifier">
-    <input type="submit" name="Supprimer" value="Supprimer">
+    <input type="submit" name="Modifier" value="Modifier"/>
+    <input type="submit" name="Supprimer" value="Supprimer"/>
+
+    <input type="hidden" name="id" value="<?php echo $dataArticles['id'] ?>"/>
 
   </form>
 <?php
