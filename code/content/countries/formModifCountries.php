@@ -1,7 +1,7 @@
 <!-- fichier include dans adminCreatePays -->
 <?php
 
-include '../action/recupCountries.php';
+include '../content/recupCountries.php';
 
 foreach ($dataCountry as $dataCountries): ?>
   <form action="../action/gestionCountries.php" method="post">

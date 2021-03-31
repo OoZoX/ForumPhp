@@ -15,7 +15,7 @@ if (empty($_SESSION['admin'])) {
     <header>
       <?php include '../content/nav.php' ?>
     </header>
-    
+
       <div>
         <h1>Page Admin</h1>
       </div>
@@ -27,7 +27,7 @@ if (empty($_SESSION['admin'])) {
 
         <div>
           <?php include '../action/recupCountries.php'; ?>
-          <?php include '../content/articles/formCreateArticles.php'; ?>
+          <?php include '../content/articlesAdmin/formCreateArticles.php'; ?>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ if (empty($_SESSION['admin'])) {
         </div>
 
         <div>
-          <?php include '../content/articles/afficheArticlesAdmin.php'; ?>
+          <?php include '../content/articlesAdmin/afficheArticlesAdmin.php'; ?>
         </div>
       </div>
 

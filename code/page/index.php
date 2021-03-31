@@ -10,9 +10,13 @@
     <header>
       <?php include '../content/nav.php' ?>
     </header>
-    <h1>VENEZVISITERLEPAYSDEVOTRECHOIX.COM</h1>
-    <h2>Dernier article posté</h2>
-
+    <div>
+      <h1>VENEZVISITERLEPAYSDEVOTRECHOIX.COM</h1>
+    </div>
+    <div>
+      <h2>Dernier article posté</h2>
+    </div>
+    
 
 
   </body>
