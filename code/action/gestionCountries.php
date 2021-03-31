@@ -49,4 +49,4 @@ else {  //creation pays
 }
 
 
-header('Location: ../page/adminGestionPays.php');
+header('Location: ../page/adminGestionCountries.php');

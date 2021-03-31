@@ -5,42 +5,52 @@ if (empty($_SESSION['admin'])) {
   header('Location: index.php');
 }?>
 
-<div>
-  <div>
-    <?php include '../content/nav.php' ?>
-  </div>
-
-  <div>
-    <h1>Page Admin</h1>
-  </div>
-
-  <div>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <?php
+  include '../content/head.php';
+  $title = 'Gestion Article';
+  ?>
+  <body>
     <div>
-      <h2>Creation d'un Article</h2>
+      <div>
+        <?php include '../content/nav.php' ?>
+      </div>
+
+      <div>
+        <h1>Page Admin</h1>
+      </div>
+
+      <div>
+        <div>
+          <h2>Creation d'un Article</h2>
+        </div>
+
+        <div>
+          <?php include '../action/recupCountries.php'; ?>
+          <?php include '../content/articles/formCreateArticles.php'; ?>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Choisir un pays</h2>
+        </div>
+
+        <div>
+          <form action="adminGestionArticles.php" method="post">
+            <select name="countrySelect">
+              <?php include '../content/selectCountries.php'; ?>
+              <input type="submit" name="btn" value="go"/>
+            </select>
+          </form>
+        </div>
+
+        <div>
+          <?php include '../content/articles/afficheArticlesAdmin.php'; ?>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <?php include '../action/recupCountries.php'; ?>
-      <?php include '../content/articles/formCreateArticles.php'; ?>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <h2>Choisir un pays</h2>
-    </div>
-
-    <div>
-      <form action="adminGestionArticles.php" method="post">
-        <select name="countrySelect">
-          <?php include '../content/selectCountries.php'; ?>
-          <input type="submit" name="btn" value="go"/>
-        </select>
-      </form>
-    </div>
-
-    <div>
-      <?php include '../content/articles/afficheArticlesAdmin.php'; ?>
-    </div>
-  </div>
-</div>
+  </body>
+</html>
